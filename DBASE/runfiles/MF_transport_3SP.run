@@ -1,0 +1,184 @@
+"n:\Projects\11209000\11209163\B. Measurements and calculations\Weert\results\MF_transport_3SP\"
+     13      13        6          11.0e-5           1         0         0         0
+         1        0         0          0           0
+       500       15 0.100E-02  0.100E+03   0.95E+00       1.0        30
+164000.0  353000.0  176000.0  366000.0    10.00  0.00 totaal10
+ACTIVE MODULES
+1,1,0 (BND)
+1,1,0 (SHD)
+1,1,0 (KDW)
+1,1,0 (VCW)
+1,1,0 (STO)
+1,1,0 (WEL)
+1,1,0 (RIV)
+1,1,0 (RCH)
+"..\bas\bnd.IDF"
+MODULES FOR EACH LAYER
+13,(BND)
+         1,1.0,0.0,"..\bas\bnd.IDF"
+         2,1.0,0.0,"..\bas\bnd.IDF"
+         3,1.0,0.0,"..\bas\bnd.IDF"
+         4,1.0,0.0,"..\bas\bnd.IDF"
+         5,1.0,0.0,"..\bas\bnd.IDF"
+         6,1.0,0.0,"..\bas\bnd.IDF"
+         7,1.0,0.0,"..\bas\bnd.IDF"
+         8,1.0,0.0,"..\bas\bnd.IDF"
+         9,1.0,0.0,"..\bas\bnd.IDF"
+         10,1.0,0.0,"..\bas\bnd.IDF"
+         11,1.0,0.0,"..\bas\bnd.IDF"
+         12,1.0,0.0,"..\bas\bnd.IDF"
+         13,1.0,0.0,"..\bas\bnd.IDF"
+13,(SHD)
+         1,1.0,0.0,"..\bas\shead_l1.IDF"
+         2,1.0,0.0,"..\bas\shead_l2.IDF"
+         3,1.0,0.0,"..\bas\shead_l2.IDF"
+         4,1.0,0.0,"..\bas\shead_l3.IDF"
+         5,1.0,0.0,"..\bas\shead_l3.IDF"
+         6,1.0,0.0,"..\bas\shead_l4.IDF"
+         7,1.0,0.0,"..\bas\shead_l4.IDF"
+         8,1.0,0.0,"..\bas\shead_l5.IDF"
+         9,1.0,0.0,"..\bas\shead_l5.IDF"
+         10,1.0,0.0,"..\bas\shead_l6.IDF"
+         11,1.0,0.0,"..\bas\shead_l6.IDF"
+         12,1.0,0.0,"..\bas\shead_l7.IDF"
+         13,1.0,0.0,"..\bas\shead_l7.IDF"
+13,(KDW)
+         1,1.0,0.0,0.0
+         2,1.0,0.0,0.0
+         3,1.0,0.0,"..\bcf\tran_l2.IDF"
+         4,1.0,0.0,0.0
+         5,1.0,0.0,"..\bcf\tran_l3.IDF"
+         6,1.0,0.0,0.0
+         7,1.0,0.0,"..\bcf\tran_l4.IDF"
+         8,1.0,0.0,0.0
+         9,1.0,0.0,"..\bcf\tran_l5.IDF"
+         10,1.0,0.0,0.0
+         11,1.0,0.0,"..\bcf\tran_l6.IDF"
+         12,1.0,0.0,0.0
+         13,1.0,0.0,"..\bcf\tran_l7.IDF"
+12,(VCW)
+         1,1.0,0.0,1.0e-3
+         2,1.0,0.0,1.0e-3
+         3,1.0,0.0,"..\bcf\vcw_l2.IDF"
+         4,1.0,0.0,"..\bcf\vcw_l2.IDF"
+         5,1.0,0.0,"..\bcf\vcw_l3.IDF"
+         6,1.0,0.0,"..\bcf\vcw_l3.IDF"
+         7,1.0,0.0,"..\bcf\vcw_l4.IDF"
+         8,1.0,0.0,"..\bcf\vcw_l4.IDF"
+         9,1.0,0.0,"..\bcf\vcw_l5.IDF"
+         10,1.0,0.0,"..\bcf\vcw_l5.IDF"
+         11,1.0,0.0,"..\bcf\vcw_l6.IDF"
+         12,1.0,0.0,"..\bcf\vcw_l6.IDF"
+13,(STO)
+         1,0.5,0.0,0.2
+         2,0.5,0.0,1.0e-5
+         3,0.5,0.0,1.0e-5
+         4,0.5,0.0,1.0e-5
+         5,0.5,0.0,1.0e-5
+         6,0.5,0.0,1.0e-5
+         7,0.5,0.0,1.0e-5
+         8,0.5,0.0,1.0e-5
+         9,0.5,0.0,1.0e-5
+         10,0.5,0.0,1.0e-5
+         11,0.5,0.0,1.0e-5
+         12,0.5,0.0,1.0e-5
+         13,0.5,0.0,1.0e-5
+PACKAGES FOR EACH LAYER AND STRESS-PERIOD
+1,0.00,steady-state,1,1
+7,(WEL)
+ 3,1.0,0.0,"..\WEL\Q_L2.ipf"
+ 5,1.0,0.0,"..\WEL\Q_L3.ipf"
+ 7,1.0,0.0,"..\WEL\Q_L4_geen_Nyrstar.ipf"
+ 9,1.0,0.0,"..\WEL\Q_L5_geen_Nyrstar.ipf"
+ 11,1.0,0.0,"..\WEL\Q_L6.ipf"
+ 13,1.0,0.0,"..\WEL\Q_L7.ipf"
+  7,1.0,0.0,"..\WEL\Q_Akzo_koelwater_L4.ipf"
+ 1,(RIV)
+ 1,1.0,0.0,"..\RIV\COND.IDF"
+ 1,1.0,0.0,"..\RIV\STAGE.IDF"
+ 1,1.0,-2.0,"..\RIV\STAGE.IDF"
+ 1,1.0,0.0,"..\RIV\INFFCT.IDF"
+ 1,(RCH)
+ -1,1000.0,0.0,"..\RCH\RECHARGE.IDF"                          ! opmerking imodflow verwacht eenheid van mm/dag
+2,8035.00,19700101,1,1
+7,(WEL)
+ 3,1.0,0.0,"..\WEL\Q_L2.ipf"
+ 5,1.0,0.0,"..\WEL\Q_L3.ipf"
+ 7,1.0,0.0,"..\WEL\Q_L4_geen_Nyrstar.ipf"
+ 9,1.0,0.0,"..\WEL\Q_L5_geen_Nyrstar.ipf"
+ 11,1.0,0.0,"..\WEL\Q_L6.ipf"
+ 13,1.0,0.0,"..\WEL\Q_L7.ipf"
+  7,1.0,0.0,"..\WEL\Q_Akzo_koelwater_L4.ipf"
+ 1,(RIV)
+ 1,1.0,0.0,"..\RIV\COND.IDF"
+ 1,1.0,0.0,"..\RIV\STAGE.IDF"
+ 1,1.0,-2.0,"..\RIV\STAGE.IDF"
+ 1,1.0,0.0,"..\RIV\INFFCT.IDF"
+ 1,(RCH)
+ -1,1000.0,0.0,"..\RCH\RECHARGE.IDF"                          ! opmerking imodflow verwacht eenheid van mm/dag
+3,1461.00,19920101,1,1
+7,(WEL)
+ 3,1.0,0.0,"..\WEL\Q_L2.ipf"
+ 5,1.0,0.0,"..\WEL\Q_L3.ipf"
+ 7,1.0,0.0,"..\WEL\Q_L4.ipf"
+ 9,1.0,0.0,"..\WEL\Q_L5.ipf"
+ 11,1.0,0.0,"..\WEL\Q_L6.ipf"
+ 13,1.0,0.0,"..\WEL\Q_L7.ipf"
+  7,1.0,0.0,"..\WEL\Q_Akzo_koelwater_L4.ipf"
+ 1,(RIV)
+ 1,1.0,0.0,"..\RIV\COND.IDF"
+ 1,1.0,0.0,"..\RIV\STAGE.IDF"
+ 1,1.0,-2.0,"..\RIV\STAGE.IDF"
+ 1,1.0,0.0,"..\RIV\INFFCT.IDF"
+ 1,(RCH)
+ -1,1000.0,0.0,"..\RCH\RECHARGE.IDF"                          ! opmerking imodflow verwacht eenheid van mm/dag
+4,912.00,19960101,1,1
+6,(WEL)
+ 3,1.0,0.0,"..\WEL\Q_L2.ipf"
+ 5,1.0,0.0,"..\WEL\Q_L3.ipf"
+ 7,1.0,0.0,"..\WEL\Q_L4.ipf"
+ 9,1.0,0.0,"..\WEL\Q_L5.ipf"
+ 11,1.0,0.0,"..\WEL\Q_L6.ipf"
+ 13,1.0,0.0,"..\WEL\Q_L7.ipf"
+ 1,(RIV)
+ 1,1.0,0.0,"..\RIV\COND.IDF"
+ 1,1.0,0.0,"..\RIV\STAGE.IDF"
+ 1,1.0,-2.0,"..\RIV\STAGE.IDF"
+ 1,1.0,0.0,"..\RIV\INFFCT.IDF"
+ 1,(RCH)
+ -1,1000.0,0.0,"..\RCH\RECHARGE.IDF"                          ! opmerking imodflow verwacht eenheid van mm/dag
+5,2741.00,19980701,1,1
+6,(WEL)
+ 3,1.0,0.0,"..\WEL\Q_L2.ipf"
+ 5,1.0,0.0,"..\WEL\Q_L3.ipf"
+ 7,1.0,0.0,"..\WEL\Q_L4.ipf"
+ 9,1.0,0.0,"..\WEL\Q_L5.ipf"
+ 11,1.0,0.0,"..\WEL\Q_L6.ipf"
+ 13,1.0,0.0,"..\WEL\Q_L7.ipf"
+ 1,(RIV)
+ 1,1.0,0.0,"..\RIV\COND.IDF"
+ 1,1.0,0.0,"..\RIV\STAGE.IDF"
+ 1,1.0,-2.0,"..\RIV\STAGE.IDF"
+ 1,1.0,0.0,"..\RIV\INFFCT.IDF"
+ 1,(RCH)
+ -1,1000.0,0.0,"..\RCH\RECHARGE.IDF"                          ! opmerking imodflow verwacht eenheid van mm/dag
+6,6940.00,20060101,1,1
+8,(WEL)
+ 3,1.0,0.0,"..\WEL\Q_L2.ipf"
+ 5,1.0,0.0,"..\WEL\Q_L3.ipf"
+ 7,1.0,0.0,"..\WEL\Q_L4.ipf"
+ 9,1.0,0.0,"..\WEL\Q_L5.ipf"
+ 11,1.0,0.0,"..\WEL\Q_L6.ipf"
+ 13,1.0,0.0,"..\WEL\Q_L7.ipf"
+ 5,1.0,0.0,"..\WEL\Q_Mourik_ondiep.ipf"
+ 7,1.0,0.0,"..\WEL\Q_Mourik_diep.ipf"
+ 1,(RIV)
+ 1,1.0,0.0,"..\RIV\COND.IDF"
+ 1,1.0,0.0,"..\RIV\STAGE.IDF"
+ 1,1.0,-2.0,"..\RIV\STAGE.IDF"
+ 1,1.0,0.0,"..\RIV\INFFCT.IDF"
+ 1,(RCH)
+ -1,1000.0,0.0,"..\RCH\RECHARGE.IDF"                          ! opmerking imodflow verwacht eenheid van mm/dag
+
+
+

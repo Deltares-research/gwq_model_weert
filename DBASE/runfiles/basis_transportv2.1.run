@@ -1,0 +1,147 @@
+############################################################################
+# Voormalige Akzo locatie, Kempenweg Weert iMOD run-file for MT3D
+#
+# Johan Valstar, Deltares
+#
+# Valid tokens to use with _S (species), _P (stress period),
+# _L (model layer), _R (row), _C (column) are: $, ? and &
+############################################################################
+
+WRITEHELP = FALSE     # write run-file help to a csv-file
+
+MODELNAME  = Kempenweg_basis           # set model name
+PACKAGES   = BTN, GCG, ADV, DSP, SSM, FTL, UDR     # set active packages
+RUNTYPE = MT3DMS
+
+RESULT_DIR = basis_v2.1
+
+START_YEAR  = 1970
+START_MONTH = 1
+START_DAY   = 1
+
+COORD_XLL   = 170000.00                          # lower left X-coordinate
+COORD_YLL   = 359250.00                         # lower left Y-coordinate
+COORD_XUR   = 171500.00                          # upper right X-coordinate
+COORD_YUR   = 360500.00                         # upper left Y-coordinate
+
+
+[BTN]  # Basic Transport Package
+
+    NLAY  = 13
+    NPER  = 5
+    CINACT = -9999.
+
+    NCOMP = 1
+    MCOMP = 1
+
+# Gemodelleerde stoffen:
+#   1: Chloroform
+
+
+    DELR_C$ = 10.                       # well width along rows (or x-axis)
+    DELC_R$ = 10.                       # well width along columns (or y-axis)
+
+    HTOP     =  ..\dis\TOP.IDF
+    DZ_L$ = ..\dis\transport\DZ_L$.IDF
+    PRSITY_L$ = .30
+
+    ICBUND_L1:2 = 0   # model boundaries
+    ICBUND_L$ = ..\bas\cbnd.IDF   # model boundaries
+
+
+    SCONC_S1_L1:7 =  0.0
+    SCONC_S1_L8:13 = 0.0
+
+    SCONC_S2_L1:7 = 0.0
+    SCONC_S2_L8:13 = 0.0
+
+    SCONC_S3_L1:7 = 0.0
+    SCONC_S3_L8:13 = 0.0
+
+    SCONC_S4_L1:7 = 0.0
+    SCONC_S4_L8:13 = 0.0
+
+
+    THKMIN = 0.
+
+    PERLEN_P1 = 8035.                       #   22 jaar (1-1 1970 tm  1-1 1992)
+    PERLEN_P2 = 1461.                       #   4 jaar (1-1 1992 tm  1-1 1996) aanname
+    PERLEN_P3 = 912.                        #   2.5 jaar (1-1 1996 tm  1-7 1998) aanname
+    PERLEN_P4 = 2741.                       #   7.5 jaar (1-7 1998 tm  1-1 2006) aanname
+    PERLEN_p5 = 6940.                       #   19 jaar (1-1 2006 tm  1-1 2025) aanname
+    NSTP_P? = 1
+    MXSTRN_P? = 100000.
+    DT0_P? = 10.0
+
+    OBS_L7  = ..\obs_l7.ipf               # observation points
+    OBS_L5  = ..\obs_l5.ipf               # observation points
+
+    IFMTCN = 8
+    IFMTNP = 2
+    NPRS = 6
+    TIMPRS = 100.0, 1825.,3650., 8035.0,13149.0, 20089.0
+
+[ADV]
+    PERCEL = 1.0
+
+
+[DSP]
+    AL_L$ = 1.0       # longitudinal dispersivity
+    TRPT_L$ = 0.1               # ratio of horizontal transversal dispersivity to longitudinal dispersivity
+    TRPV_L$ = 0.03              # ratio of vertical transversal dispersivity to longitudinal dispersivity
+    DMCOEF = 0e-3               # molecular diffusion coefficient
+
+
+
+[SSM]
+    MXSS = 600000
+    CRCH_T$_P$ = 0.0
+    CTVC_T$_P1:3_L3 = ..\SSM\CTVC_voor_1998_L3.IDF
+    CTVC_T$_P1:3_L5 = ..\SSM\CTVC_voor_1998_L5.IDF
+    CTVC_T$_P1:3_L7 = ..\SSM\CTVC_voor_1998_L7.IDF
+
+
+    CTVC_T$_P4:5_L3 = ..\SSM\CTVC_vanaf_1998_L3.IDF
+    CTVC_T$_P4:5_L5 = ..\SSM\CTVC_vanaf_1998_L5.IDF
+    CTVC_T$_P4:5_L7 = ..\SSM\CTVC_vanaf_1998_L7.IDF
+
+[UDR]
+    ISOTHM = 1 # linear sorption
+    IREACT = 6
+    IRCTOP = 2 # all reaction variables are specified as 3D arrays on a cell-by-cell basis
+    ISOLVER = 1
+
+    NCRXNDATA = 7 #Namely, 4 decay constants for the 4 mobile components + 3 stoichiometric constants
+    NVRXNDATA = 0
+
+    RHOB_L$ = 1600.0
+
+    SP1_S1_L$ = 0.0008045    # 0.00109
+    SP1_S2_L$ = 0.0
+    SP1_S3_L$ = 0.0
+    SP1_S4_L$ = 0.0
+
+    SP2_S$_L$ = 0.0
+
+    ATOL_S$ = 1.0E-7
+    RTOL_S$ = 2.0E-7
+
+    RC1 = 0.000   ! 27 #d-1 P25 Per
+    RC2 = 0.00001 #d-1 P25 Tri
+    RC3 = 0.00001 #d-1 P25 Cis
+    RC4 = 0.00001 #d-1 P25 VC
+    RC5 = 0.7922 #131.36/165.8
+    RC6 = 0.738 #96.9/131.36
+    RC7 = 0.644 #62.45/96.9
+
+
+[FTL] # iMOD Flow Transport Link model
+    FTLSOURCE = 1
+    FLOWTYPE = TR
+    FLOW_RESULT_DIR = ..\..\results\MF_transport_v2.1\
+    IBOUND_L$       = ..\BAS\BND.idf   # model boundaries
+    BDG             = BDGBND, BDGFFF, BDGFRF, BDGFLF, BDGRIV, BDGWEL, BDGRCH, BDGSTO # budget terms
+
+
+
+

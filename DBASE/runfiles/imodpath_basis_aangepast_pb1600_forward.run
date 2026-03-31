@@ -1,0 +1,68 @@
+7, !## nlay
+1, !## nper
+"..\STARTPOINTS\KEMPENWEG_1600-2.isd", !## startpoint file
+"..\results\iMODPATH\pb1600-2_forward", !## result file
+2,2 !## imode
+0, !## forwards=0;backwards=1
+2, !## isnk
+0.90, !## fraction
+1, !## stop criterium
+0.8+06, !## time maximum (days!)
+20240101, !## startdate
+20240101, !## startwindow
+22240101, !## endwindow
+"..\bas\bnd.IDF", !## ibound layer 1
+"..\dis\TOP.IDF", !## top layer 1
+"..\dis\BOT_WVP_L1.IDF", !## bottom layer 1
+"0.3", !## porosity aquifer layer 1
+"0.2", !## porosity aquitard layer 1
+"..\bas\bnd.IDF", !## ibound layer 2
+"..\dis\TOP_WVP_L2.IDF", !## top layer 2
+"..\dis\BOT_WVP_L2.IDF", !## bottom layer 2
+"0.3", !## porosity aquifer layer 2
+"0.2", !## porosity aquitard layer 2
+"..\bas\bnd.IDF", !## ibound layer 3
+"..\dis\TOP_WVP_L3.IDF", !## top layer 3
+"..\dis\BOT_WVP_L3.IDF", !## bottom layer 3
+"0.3", !## porosity aquifer layer 3
+"0.2", !## porosity aquitard layer 3
+"..\bas\bnd.IDF", !## ibound layer 4
+"..\dis\TOP_WVP_L4.IDF", !## top layer 4
+"..\dis\BOT_WVP_L4.IDF", !## bottom layer 4
+"0.3", !## porosity aquifer layer 4
+"0.2", !## porosity aquitard layer 4
+"..\bas\bnd.IDF", !## ibound layer 5
+"..\dis\TOP_WVP_L5.IDF", !## top layer 5
+"..\dis\BOT_WVP_L5.IDF", !## bottom layer 5
+"0.3", !## porosity aquifer layer 5
+"0.2", !## porosity aquitard layer 5
+"..\bas\bnd.IDF", !## ibound layer 6
+"..\dis\TOP_WVP_L6.IDF", !## top layer 6
+"..\dis\BOT_WVP_L6.IDF", !## bottom layer 6
+"0.3", !## porosity aquifer layer 6
+"0.2", !## porosity aquitard layer 6
+"..\bas\bnd.IDF", !## ibound layer 7
+"..\dis\TOP_WVP_L7.IDF", !## top layer 7
+"..\dis\BOT_WVP_L7.IDF", !## bottom layer 7
+"0.3", !## porosity aquifer layer 7
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L1.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L1.IDF", !## bdffff
+"..\..\results\basis_aangepast\BDGFLF\BDGFLF_STEADY-STATE_L1.IDF", !## bdgflf
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L2.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L2.IDF", !## bdffff
+"..\..\results\basis_aangepast\BDGFLF\BDGFLF_STEADY-STATE_L2.IDF", !## bdgflf
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L3.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L3.IDF", !## bdffff
+"..\..\results\basis_aangepast\BDGFLF\BDGFLF_STEADY-STATE_L3.IDF", !## bdgflf
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L4.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L4.IDF", !## bdffff
+"..\..\results\basis_aangepast\BDGFLF\BDGFLF_STEADY-STATE_L4.IDF", !## bdgflf
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L5.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L5.IDF", !## bdffff
+"..\..\results\basis_aangepast\BDGFLF\BDGFLF_STEADY-STATE_L5.IDF", !## bdgflf
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L6.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L6.IDF", !## bdffff
+"..\..\results\basis_aangepast\BDGFLF\BDGFLF_STEADY-STATE_L6.IDF", !## bdgflf
+"..\..\results\basis_aangepast\BDGFRF\BDGFRF_STEADY-STATE_L7.IDF", !## bdgfrf
+"..\..\results\basis_aangepast\BDGFFF\BDGFFF_STEADY-STATE_L7.IDF", !## bdffff
+
