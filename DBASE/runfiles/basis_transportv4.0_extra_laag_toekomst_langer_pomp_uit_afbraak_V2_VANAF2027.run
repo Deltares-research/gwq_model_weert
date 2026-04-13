@@ -13,9 +13,9 @@ MODELNAME  = Kempenweg_basis           # set model name
 PACKAGES   = BTN, GCG, ADV, DSP, SSM, FTL, UDR     # set active packages
 RUNTYPE = MT3DMS
 
-RESULT_DIR = basis_v4.0_extra_laag_toekomst_langer_pomp_uit_afbraak
+RESULT_DIR = basis_v4.0_extra_laag_toekomst_pomp_uit_tot2326
 
-START_YEAR  = 1970
+START_YEAR  = 2027
 START_MONTH = 1
 START_DAY   = 1
 
@@ -28,7 +28,7 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
 [BTN]  # Basic Transport Package
 
     NLAY  = 14
-    NPER  = 6
+    NPER  = 1
     CINACT = -9999.
 
     NCOMP = 1
@@ -49,39 +49,28 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
     ICBUND_L$ = ..\bas\cbnd_groter.IDF   # model boundaries
 
 
-    SCONC_S1_L1:8 =  0.0
-    SCONC_S1_L9:14 = 0.0
+    SCONC_S1_L$ =  p:\afbouw-nazorg-bodemsanering\Weert\gwq_model_weert\DBASE\runfiles\basis_v4.0_extra_laag_toekomst_pomp_uit_tot2326\conc\conc_20270101_l$.IDF
 
-    SCONC_S2_L1:8 = 0.0
-    SCONC_S2_L9:14 = 0.0
 
-    SCONC_S3_L1:8 = 0.0
-    SCONC_S3_L9:14 = 0.0
 
-    SCONC_S4_L1:8 = 0.0
-    SCONC_S4_L9:14 = 0.0
 
 
     THKMIN = 0.
 
-    PERLEN_P1 = 8035.                       #   22 jaar (1-1 1970 tm  1-1 1992)
-    PERLEN_P2 = 1461.                       #   4 jaar (1-1 1992 tm  1-1 1996) aanname 9496
-    PERLEN_P3 = 912.                        #   2.5 jaar (1-1 1996 tm  1-7 1998) aanname 10408
-    PERLEN_P4 = 2741.                       #   7.5 jaar (1-7 1998 tm  1-1 2006) aanname 13149
-    PERLEN_P5 = 7305.                       #   19 jaar (1-1 2006 tm  1-1 2026) aanname  20454
-    PERLEN_P6 = 109937.                     #   50 jaar (1-1 2026 tm  1-1 2076) aanname  38717 stopte na 32255 (tijdstap 1412)
+    PERLEN_1 = 109937.                     #   50 jaar (1-1 2026 tm  1-1 2076) aanname  38717 stopte na 32255 (tijdstap 1412)
     NSTP_P? = 1
     MXSTRN_P? = 300000.
 
     DT0_P? = 10.0
 
-    OBS_L8  = ..\obs_l7.ipf               # observation points
-    OBS_L5  = ..\obs_l5.ipf               # observation points
+    #OBS_L8  = ..\obs_l7.ipf               # observation points
+    #OBS_L5  = ..\obs_l5.ipf               # observation points
 
     IFMTCN = 8
     IFMTNP = 2
-    NPRS = 19
-    TIMPRS = 100.0, 1825.,3650., 8035.0,13149.0, 20089.0, 20819.0, 29950.0, 39082.0, 48212.0, 57343.0, 66474.0, 75606.0, 84736.0, 93867.0, 102998.0, 112130.0, 121260.0, 130391.0
+    NPRS = 12
+    TIMPRS = 9131.25, 18262.5, 27393.75, 36525.0, 45656.25, 54787.5, 63918.75, 73050.0, 82181.25, 91312.5, 100443.75, 109575.0
+
 
 [ADV]
     PERCEL = 1.0
@@ -100,10 +89,9 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
     CRCH_T$_P$ = 0.0
     CTVC_T$_P$_L3 = ..\SSM\CTVC_zonder_spoortraject_l3.idf
     CTVC_T$_P$_L5 = ..\SSM\CTVC_zonder_spoortraject_l5.idf
-    CTVC_T$_P1:3_L8 = ..\SSM\CTVC_zonder_spoortraject_nieuwe_lagenindeling_l8.idf
 
-    CTVC_T$_P4:6_L6 = ..\SSM\CTVC_spoortraject_na_1998_nieuwe_lagenindeling_l6.idf
-    CTVC_T$_P4:6_L8 =..\SSM\CTVC_met_spoortraject_na_1998_nieuwe_lagenindeling_l8.idf
+    CTVC_T$_P1_L6 = ..\SSM\CTVC_spoortraject_na_1998_nieuwe_lagenindeling_l6.idf
+    CTVC_T$_P1_L8 =..\SSM\CTVC_met_spoortraject_na_1998_nieuwe_lagenindeling_l8.idf
 
 [UDR]
     ISOTHM = 1 # linear sorption
@@ -139,7 +127,7 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
 [FTL] # iMOD Flow Transport Link model
     FTLSOURCE = 1
     FLOWTYPE = TR
-    FLOW_RESULT_DIR = ..\..\results\MF_transport_v3.0_extra_laag_toekomst_pomp_uit\
+    FLOW_RESULT_DIR = ..\..\results\MF_transport_v3.0_extra_laag_toekomst_pomp_uit_tot2326\
     IBOUND_L$       = ..\BAS\BND.idf   # model boundaries
     BDG             = BDGBND, BDGFFF, BDGFRF, BDGFLF, BDGRIV, BDGWEL, BDGRCH, BDGSTO # budget terms
 

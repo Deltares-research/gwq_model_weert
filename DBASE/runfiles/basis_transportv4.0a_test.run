@@ -13,9 +13,9 @@ MODELNAME  = Kempenweg_basis           # set model name
 PACKAGES   = BTN, GCG, ADV, DSP, SSM, FTL, UDR     # set active packages
 RUNTYPE = MT3DMS
 
-RESULT_DIR = basis_v4.0_extra_laag_toekomst_langer_pomp_uit_afbraak
+RESULT_DIR = basis_v4.0a_test
 
-START_YEAR  = 1970
+START_YEAR  = 2026
 START_MONTH = 1
 START_DAY   = 1
 
@@ -49,8 +49,7 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
     ICBUND_L$ = ..\bas\cbnd_groter.IDF   # model boundaries
 
 
-    SCONC_S1_L1:8 =  0.0
-    SCONC_S1_L9:14 = 0.0
+    SCONC_S1_L$=  basis_v4.0_extra_laag_toekomst_langer_pomp_uit_afbraak\conc\conc_20270101_l$.IDF
 
     SCONC_S2_L1:8 = 0.0
     SCONC_S2_L9:14 = 0.0
@@ -81,7 +80,7 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
     IFMTCN = 8
     IFMTNP = 2
     NPRS = 19
-    TIMPRS = 100.0, 1825.,3650., 8035.0,13149.0, 20089.0, 20819.0, 29950.0, 39082.0, 48212.0, 57343.0, 66474.0, 75606.0, 84736.0, 93867.0, 102998.0, 112130.0, 121260.0, 130391.0
+    TIMPRS = 100., 365., 1200., 1825.,3650., 8035.0,13149.0, 20089.0, 20819.0, 29950.0, 39082.0, 48212.0, 57343.0, 66474.0, 75606.0, 84736.0, 93867.0, 102998.0, 112130.0, 121260.0, 130391.0
 
 [ADV]
     PERCEL = 1.0

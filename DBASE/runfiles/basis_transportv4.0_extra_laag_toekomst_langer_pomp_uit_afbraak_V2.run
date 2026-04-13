@@ -13,7 +13,7 @@ MODELNAME  = Kempenweg_basis           # set model name
 PACKAGES   = BTN, GCG, ADV, DSP, SSM, FTL, UDR     # set active packages
 RUNTYPE = MT3DMS
 
-RESULT_DIR = basis_v4.0_extra_laag_toekomst_langer_pomp_uit_afbraak
+RESULT_DIR = basis_v4.0_extra_laag_toekomst_pomp_uit_tot2326
 
 START_YEAR  = 1970
 START_MONTH = 1
@@ -139,7 +139,7 @@ COORD_YUR   = 362000.00                         # upper left Y-coordinate
 [FTL] # iMOD Flow Transport Link model
     FTLSOURCE = 1
     FLOWTYPE = TR
-    FLOW_RESULT_DIR = ..\..\results\MF_transport_v3.0_extra_laag_toekomst_pomp_uit\
+    FLOW_RESULT_DIR = ..\..\results\MF_transport_v3.0_extra_laag_toekomst_pomp_uit_tot2326\
     IBOUND_L$       = ..\BAS\BND.idf   # model boundaries
     BDG             = BDGBND, BDGFFF, BDGFRF, BDGFLF, BDGRIV, BDGWEL, BDGRCH, BDGSTO # budget terms
 
